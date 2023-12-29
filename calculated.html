@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Сравнение планов для перевода</title>
+        <link href="https://uikit.my1.urfu.ru/public/v2/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reset.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <img class="header__logo" src="./img/logoUrFU.jpg" alt="Логотип УрФУ">
+                    <i class="u-icon icon-university"></i>
+                    <p class="header__title">Сервис перевода и восстановления</p>
+                </div>
+                <nav class="navigation">
+                    <a href="./steps.html" class="nav__link"><button class="link__btn">Шаги</button></a>
+                    <a href="./main.html" class="nav__link"><button class="link__btn">Сервис</button></a>
+                    <a href="./questions.html" class="nav__link"><button class="link__btn">Вопрос/Ответ</button></a>
+                    <a href="" class="nav__link"><button class="link__btn">Документы</button></a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="add__form">
+                <div class="container">
+                    <div class="form form_add-direction">
+                        <div class="search__discipline">
+                            <label for="directionInput" class="form__label label__direction">Название направления, на которое желаете перевестись</label>
+                            <input id="directionInput" class="input__container input-add__direction" type="text" oninput="showAutocomplete()">
+                            <div id="autocomplete-list"></div>
+                        </div>
+
+                        <label for="semesterDirectionSelect" class="form__label form__label-1">Семестр</label>
+                        <select id="semesterDirectionSelect" class="input__container select-semester">
+                            <option hidden></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <h1 class="title-add__form">Форма для добавления предмета</h1>
+                    <div class="form">
+                        <div class="form-example-1">
+                            <label for="disciplineInput" class="form__label">Название дисциплины</label>
+                            <input id="disciplineInput" class="input__container input-add__discipline" type="text" autocomplete="off">
+                        </div>
+                        <div class="form-example">
+                            <label for="countItemsInput" class="form__label">Количество зачётных единиц</label>
+                            <input id="countItemsInput" class="input__container input-count__items" type="number">
+                            
+                            <label for="semesterSelect" class="form__label form__label-1">Семестр</label>
+                            <select id="semesterSelect" class="input__container select-semester">
+                                <option hidden></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+
+                            
+    
+                            <label for="verificationInput" class="form__label form__label-1">Форма проверки</label>
+                            <select id="verificationInput" class="input__container select-form">
+                                <option hidden></option>
+                                <option value="Зачет">Зачёт</option>
+                                <option value="Экзамен">Экзамен</option>
+                            </select>
+                            <!-- <input id="verificationInput" class="input input-form" type="text"> -->
+                        </div>
+                    </div>
+                    <button class="u-button addButton">Добавить дисциплину</button>
+                </div>
+            </section>
+            <section class="list__add-discipline">
+                <div class="container">
+                    <h1>Список добавленных дисциплин</h1>
+                    <form id="send__form">
+                        <div class="list__wrapper">
+                            <ul class="list__discipline">
+                            </ul>
+                        </div>
+                        <div class="btn__container">
+                            <button type="submit" class="button__send" form="send__form">Отправить</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </section>
+
+            <section class="comparison__result">
+                <div class="container">
+                    <h1>Результат сравнения учебных планов</h1>
+                    <div class="result">
+                        <label for="output__result-credit">Академическая разница: <input type="text" id="output__result-credit"></label>
+                        <label for="output__result">Возможен ли перевод: <input type="text" id="output__result"></label>
+                    </div>
+                    <div class="list__wrapper">
+                        <ul class="list__discipline">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="upperline"></div>
+                <div class="footer">
+                    <p class="support">Техническая поддержка </p>
+                    <a  class="email" href="mailto:support@urfu.ru">support@urfu.ru</a>
+                </div>
+            </div>
+        </footer>
+        <template id="template__form">
+            <li class="form form-list">
+                <div class="form-example-1">
+            
+                    <label class="form__label" for="outputDiscipline">Название дисциплины</label>
+                    <input id="outputDiscipline" class="input__container output-add_discipline" type="text" readonly>
+                </div>
+                <div class="form-example">
+                    <label class="form__label" for="outputCountItems">Количество зачётных единиц</label>
+                    <input id="outputCountItems" class="input__container input-count__items" type="number" readonly>
+            
+                    <label class="form__label" for="outputSemester">Семестр</label>
+                    <input id="outputSemester" class="input__container select-semester" type="number" readonly>
+            
+                    <label class="form__label" for="outputVerificationForm">Форма проверки</label>
+                    <input id="outputVerificationForm" class="input__container select-form" type="text" readonly>
+                </div>
+                <button class="u-button u-button-danger">Удалить</button>
+            </li>            
+        </template>
+
+        <template id="template__form-2">
+            <li class="form form-comparison__result">
+                <div class="name__discipline">
+                    <label class="label__discipline" for="outputYourDiscipline">Название дисциплины из вашего учебного плана</label>
+                    <input id="outputYourDiscipline" class="input__container output__discipline" type="text" readonly>
+
+                    <label class="label__discipline" for="outputNeedDiscipline">Название дисциплины из выбранного направления</label>
+                    <input id="outputNeedDiscipline" class="input__container output__discipline" type="text" readonly>
+                    <!-- <p class="comparison__title">Название дисциплины</p>
+                    <input class="input output__discipline" type="text" readonly> -->
+                </div>
+                <div class="count-items__in-plane">
+                    <div class="your-count-items">
+                        <label class="label-count-items" for="outputCountItems">Количество зачётных единиц в вашем учебном плане</label>
+
+                        <!-- <p class="comparison__title count__hours">Количество зачётных единиц в вашем учебном плане</p> -->
+                        <input id="outputCountItems" class="input__container output__your-count-items" type="number" readonly>
+                    </div>
+                    <div class="need-count-items">
+                        <label class="label-count-items" for="outputCountItemsDifferentPlan">Количество зачётных единиц в выбранном учебном плане</label>
+
+                    <!-- <p class="comparison__title count__hours">Количество зачётных единиц в выбранном учебном плане</p> -->
+                    <input id="outputCountItemsDifferentPlan" class="input__container output__need-count-items" type="number" readonly>
+                    </div>
+                    </div>
+                    <div class="required__result">
+                        <p>Форма проверки в вашем учебном плане:</p>
+                        <p>Форма проверки в выбранном учебном плане:</p>
+                        <label class="form__label" for="outputYourVerificationForm-1">1 Семестр: <input id="outputYourVerificationForm-1" class="your-output__result-1" type="text"></label>
+                        <label class="form__label" for="outputNeedVerificationForm-1">1 Семестр: <input id="outputNeedVerificationForm-1" class="need-output__result-1" type="text"></label>
+                    </div>
+                </div>
+            </li>
+        </template>
+        <div class="u-upward" onClick={uScrollTop()}></div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

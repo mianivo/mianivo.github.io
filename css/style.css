@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color:#000
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 40px 10px 30px;
+}
+
+h2{
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header{
+    margin-bottom: 50px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* background-color:#3b3a3a */
+}
+.header__inner{
+    display: flex;
+    padding: 16px 0 30px;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.header__logo{
+    width: 267px;
+    height: 136px;
+}
+.header__title{
+    text-align: center;
+    color: #1E4391;
+    font-size: 32px;
+    font-weight: 700;
+    max-width: 336px;
+}
+
+.navigation{
+    width: 1200px;
+    display: flex;
+    height: 60px;
+    margin-bottom: 60px;
+}
+
+
+
+.link__btn{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    background-color: #0F2B5E;
+    border: 1px solid #ffffff;
+}
+
+.link__btn:hover{
+    background-color: #0f3479; 
+}
+
+.nav__link:nth-child(1) .link__btn{
+    padding: 16px 115px;
+}
+
+.nav__link:nth-child(2) .link__btn{
+    padding: 16px 100px;
+}
+
+.nav__link:nth-child(3) .link__btn{
+    padding: 16px 60px;
+}
+
+.nav__link:nth-child(4) .link__btn{
+    padding: 16px 70px;
+}
+
+/* FORM добавление дисциплины */ 
+
+.add__form{
+    margin-bottom: 30px;
+}
+
+.title-add__form{
+    padding: 0 40px 25px 30px;
+}
+
+.form{
+    width:1136px;
+    height: 175px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    border: 1px solid #4F4D4D;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+.form__label.form__label-1{
+    width: 70px;
+}
+
+.form__label.label__direction{
+    padding: 0;
+}
+
+.form-example-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-example{
+    display: grid;
+    grid-template-columns: 295px 250px 150px 150px;
+    column-gap: 20px;
+}
+
+.form_add-direction{
+    display: flex;
+    flex-wrap: wrap;
+    height: 122px;
+    margin-bottom: 65px;
+}
+
+/* .form-example-1{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+} */
+
+.input__container{
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    height: 40px;
+    margin-bottom:15px;
+    padding-left: 10px;
+    /* align-items: center; */
+}
+.input-add__discipline, .input-add__direction{
+    width: 700px;
+}
+
+.output__discipline{
+    width: 304px;
+    height: 116px;
+    text-align: center;
+}
+
+.output-add_discipline{
+    width: 630px;
+}
+
+.input-count__hours,.input-count__items{
+    max-width: 130px;
+}
+.select-semester{
+    width: 60px;
+}
+.select-form{
+    width: 126px;
+}
+
+#output__result-credit, #output__result{
+    font-weight: 700;
+}
+
+
+.form__label{
+    width:290px;
+    margin-right: 25px;
+    padding-top: 7px;
+}
+
+.label-count-items{
+    width:254px;
+    margin-right: 120px;
+}
+
+.u-button{
+    width:243px;
+    height: 40px;
+    padding: 10px;
+    color:#FFFFFF;
+    margin: 15px 26px 0 26px;
+}
+.u-button:hover{
+    background-color: #0a3694;
+}
+
+.u-button:active{
+    background-color: #636568;
+}
+
+/* Лист добавленный дисциплин*/
+
+.list__add-discipline{
+    margin-bottom: 73px;
+}
+
+.list__discipline{
+    border: 1px solid #B5B5B5;
+    background: #FFF;
+
+    width: 1136px;
+    height: 600px;
+    padding: 20px;
+    overflow-y: auto;
+}
+.list__wrapper{
+    width: 1168px;
+    height: 634px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* background-color: #0a3694; */
+    padding: 17px 16px;
+    margin-bottom: 20px;
+}
+
+.button__send{
+    justify-content: end;
+    padding: 16px 67px;
+    border-radius: 10px;
+    border: 1px solid #1E4391;
+    background: #FFF;
+    color: #1E4391;
+}
+
+.btn__container{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+
+.button__send:hover{
+    background-color: #1E4391;
+    color: #fff;
+}
+
+.form-list{
+    width: 1064px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.u-button-danger{
+    max-width:95px;
+    color:#fff;
+    padding: 10px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+}
+
+.u-button-danger:hover{
+    background-color: #720404d8;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 33px 5px 21px 52px;
+    font-weight: 700;
+}
+
+.comparison__result{
+    margin-bottom: 207px;
+
+}
+
+.form-comparison__result{
+    width: 1064px;
+    height: 300px; 
+}
+.name__discipline{
+    display: flex;
+    /* grid-template-columns: repeat(4,2fr); */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #BEBEBE;
+    gap: 20px;
+    /* justify-content: space-between; */
+}
+
+.label__discipline{
+    width:182px;
+    height: 56px;
+}
+
+.count-items__in-plane{
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #BEBEBE;
+    gap: 20px;
+}
+
+.your-count-items,.need-count-items{
+    display: flex;
+}
+
+.comparison__1{
+    display: flex;
+}
+
+.output__your-count-hours, .output__your-count-items, .output__need-count-hours, .output__need-count-items{
+    width:126px;
+}
+
+.required__result{
+    display: grid;
+    grid-template-columns: 520px 530px;
+}
+
+.your-output__result-1,.need-output__result-1{
+    margin-top: 10px;
+}
+
+/* 
+.required__result:before{
+    content: " ";
+    background: #BEBEBE;
+    width: 1px;
+    height: 271px;
+    left: 1025px;
+    bottom: 100px;
+    top: 1537px;
+    position: absolute;
+} */
+
+
+.count__hours,.count__edin{
+    display: flex;
+    /* gap:65px; */
+}
+
+.footer{
+    display: flex;
+}
+
+.upperline{
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 15px;
+}
+
+.support{
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.email{
+    color: #0645AD;
+    text-align: center;
+}
+/*2 раздел*/
+.menu{
+    margin-bottom: 384px;
+}
+.menu__list{
+    width:1168px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+.menu__list-item{
+    max-width: 574px;
+    height: 198px;
+    border-radius: 10px;
+    background: #FFF;
+    /* padding: 10px; */
+}
+
+
+.item__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 12px 19px 16px;
+    width: 550px;
+    gap: 20px;
+}
+.menu__list-btn{
+    padding: 64px 125px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 368px;
+    height: 160px;
+}
+
+.menu__list-btn:hover{
+    background-color:#0000002d;
+}
+
+.u-icon{
+    font-size: 140px;
+    width: 160px;
+    height: 160px;
+}
+.icon-university{
+    font-size: 120px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.search__discipline{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+/*Выпадающий список */
+
+#autocomplete-list {
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    width: 700px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: none;
+    z-index: 1;
+    margin-left: 310px;
+
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+#autocomplete-list div {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    display: block;
+}
+
+#autocomplete-list a:hover {
+    background-color: #f0f0f0;
+}
+
+.answer{
+    padding: 0 24px;
+}
+.questions__answer{
+    margin-bottom: 50px;
+    width: 970px;
+    line-height: 19.5px;
+}
+.answer__title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.step {
+    font-size: 24px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+
+}
+
+.steps-header {
+
+}
