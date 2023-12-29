@@ -140,12 +140,6 @@ var form = document.getElementById("send__form");
 form.addEventListener("submit", async function(event) {+-+-
     event.preventDefault();
 
-    // Получение данных из полей ввода
-    var inputs = document.getElementsByClassName("form-list");
-    for ( var i = 0; i < form.elements.length; i++ ) {
-        var e = form.elements[i];
-        alert(e.getElementsByClassName)
-    }
 
 
         var outputDiscipline = document.getElementById("outputDiscipline").value;
