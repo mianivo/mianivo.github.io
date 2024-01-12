@@ -13,12 +13,14 @@
             <div class="container">
                 <div class="header__inner">
                     <img class="header__logo" src="./img/logoUrFU.jpg" alt="Логотип УрФУ">
-                    <i class="u-icon icon-university"></i>
+                    <a href="./main.html" class="main__link">
+                        <i class="u-icon icon-university"></i>
+                    </a>
                     <p class="header__title">Сервис перевода и восстановления</p>
                 </div>
                 <nav class="navigation">
                     <a href="./steps.html" class="nav__link"><button class="link__btn">Шаги</button></a>
-                    <a href="index.html" class="nav__link"><button class="link__btn">Сервис</button></a>
+                    <a href="./calculated.html" class="nav__link"><button class="link__btn">Сервис</button></a>
                     <a href="./questions.html" class="nav__link"><button class="link__btn">Вопрос/Ответ</button></a>
                     <a href="" class="nav__link"><button class="link__btn">Документы</button></a>
                 </nav>
@@ -104,8 +106,8 @@
                 <div class="container">
                     <h1>Результат сравнения учебных планов</h1>
                     <div class="result">
-                        <label for="output__result-credit">Академическая разница: <input type="text" id="output__result-credit"></label>
-                        <label for="output__result">Возможен ли перевод: <input type="text" id="output__result"></label>
+                        <label for="output__result-credit">Академическая разница: <input type="text" id="output__result-credit" readonly></label>
+                        <label for="output__result">Возможен ли перевод: <input type="text" id="output__result" readonly></label>
                     </div>
                     <div class="list__wrapper">
                         <ul class="list__discipline">
@@ -153,28 +155,23 @@
 
                     <label class="label__discipline" for="outputNeedDiscipline">Название дисциплины из выбранного направления</label>
                     <input id="outputNeedDiscipline" class="input__container output__discipline" type="text" readonly>
-                    <!-- <p class="comparison__title">Название дисциплины</p>
-                    <input class="input output__discipline" type="text" readonly> -->
+
                 </div>
                 <div class="count-items__in-plane">
                     <div class="your-count-items">
                         <label class="label-count-items" for="outputCountItems">Количество зачётных единиц в вашем учебном плане</label>
-
-                        <!-- <p class="comparison__title count__hours">Количество зачётных единиц в вашем учебном плане</p> -->
                         <input id="outputCountItems" class="input__container output__your-count-items" type="number" readonly>
                     </div>
                     <div class="need-count-items">
                         <label class="label-count-items" for="outputCountItemsDifferentPlan">Количество зачётных единиц в выбранном учебном плане</label>
-
-                    <!-- <p class="comparison__title count__hours">Количество зачётных единиц в выбранном учебном плане</p> -->
-                    <input id="outputCountItemsDifferentPlan" class="input__container output__need-count-items" type="number" readonly>
+                        <input id="outputCountItemsDifferentPlan" class="input__container output__need-count-items" type="number" readonly>
                     </div>
                     </div>
                     <div class="required__result">
                         <p>Форма проверки в вашем учебном плане:</p>
                         <p>Форма проверки в выбранном учебном плане:</p>
-                        <label class="form__label" for="outputYourVerificationForm-1">1 Семестр: <input id="outputYourVerificationForm-1" class="your-output__result-1" type="text"></label>
-                        <label class="form__label" for="outputNeedVerificationForm-1">1 Семестр: <input id="outputNeedVerificationForm-1" class="need-output__result-1" type="text"></label>
+                        <label class="form__label" for="outputYourVerificationForm-1"><span id="numberYourSemestr"></span> Семестр: <input id="outputYourVerificationForm-1" class="your-output__result-1" type="text" readonly></label>
+                        <label class="form__label" for="outputNeedVerificationForm-1"><span id="numberNeedSemestr"></span> Семестр: <input id="outputNeedVerificationForm-1" class="need-output__result-1" type="text" readonly></label>
                     </div>
                 </div>
             </li>

@@ -44,7 +44,13 @@ h2{
     width: 267px;
     height: 136px;
 }
+
+.main__link{
+    padding: 10px 20px;
+}
+
 .header__title{
+    padding-top: 25px;
     text-align: center;
     color: #1E4391;
     font-size: 32px;
@@ -351,6 +357,7 @@ h2{
 
 .footer{
     display: flex;
+    margin-bottom: 60px;
 }
 
 .upperline{
@@ -468,16 +475,4 @@ h2{
 .answer__title{
     font-size: 24px;
     margin-bottom: 20px;
-}
-
-.step {
-    font-size: 24px;
-    margin-right: 50px;
-    margin-bottom: 30px;
-
-
-}
-
-.steps-header {
-
 }
